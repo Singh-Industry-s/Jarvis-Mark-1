@@ -26,12 +26,12 @@ jobs:
 
       - name: Build app (ARM64)
         run: |
-          pyinstaller JARVIS.spec
+          pyinstaller --name JARVIS --windowed --noconsole --icon=NONE --noconfirm MAIN_JARVIS_SOFTWARE/jarvisgui.py
 
       - name: Zip build
         run: |
           cd dist
-          zip -r JARVIS-macOS-arm64.zip JARVIS*
+          zip -r JARVIS-macOS-arm64.zip JARVIS.app
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

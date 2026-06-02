@@ -9,12 +9,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="jarvis-mark-1",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@example.com",
-    description="An AI-powered virtual assistant",
+    author="Mr. Prabhnoor Singh",
+    author_email="prabhnoorsingh@example.com",
+    description="JARVIS Mark I - Ultimate Edition AI Assistant",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/cws2024/Jarvis-Mark-1",
+    url="https://github.com/prabhnoorsinngh/Jarvis-Mark-1",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -25,7 +25,7 @@ setup(
     install_requires=requirements,
     entry_points={
         'console_scripts': [
-            'jarvis=src.main:main',
+            'jarvis=MAIN_JARVIS_SOFTWARE.jarvisgui:main',
         ],
     },
 )
