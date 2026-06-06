@@ -231,10 +231,10 @@ class ConfigManager:
     
     def _load_config(self) -> Dict[str, Any]:
         default_config = {
-            "api_key": "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",
+            "api_key": os.environ.get("OPENROUTER_API_KEY", ""),
             "api_url": "https://openrouter.ai/api/v1/chat/completions",
             "model": "google/gemini-2.5-flash",
-            "weather_api_key": "698cd3c036msh23ea74c0717cd19p117c61jsn95eb5d885d20",
+            "weather_api_key": os.environ.get("WEATHER_API_KEY", ""),
             "weather_api_host": "weatherapi-com.p.rapidapi.com",
             "language": "en",
             "auto_detect_language": True,
